@@ -69,15 +69,22 @@ def make_train_and_test_partition(k, test_partition, filename,
             for i in range(0, k):
                 with codecs.open(corpus_partition_filename(i, filename),
                                  'r', input_enc) as f_partition:
-                    content = f_partition.read()
+
                     if i == test_partition:
                         sys.stderr.write("Writing %s to %s\n" %
                                          (f_partition.name, f_test.name))
-                        f_train.write(content)
+                        for line in f_partition:
+                            col = 6
+                            cols_keep = line.strip().split()[:col]
+                            cols_discard = line.strip().split()[col:]
+                            cols_empty = ['_'] * len(cols_discard)
+                            nodep_line = "\t".join(cols_keep + cols_empty) + "\n"
+                            f_test.write(nodep_line)
                     else:
+                        content = f_partition.read()
                         sys.stderr.write("Writing %s to %s\n" %
                                          (f_partition.name, f_train.name))
-                        f_test.write(content)
+                        f_train.write(content)
 
     return filename_train, filename_test
 

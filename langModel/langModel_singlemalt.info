@@ -1,0 +1,84 @@
+CONFIGURATION
+Configuration name:   langModel
+Configuration type:   singlemalt
+Created:              Sat Mar 14 15:17:17 CET 2015
+
+SYSTEM
+Operating system architecture: x86_64
+Operating system name:         Mac OS X
+JRE vendor name:               Oracle Corporation
+JRE version number:            1.8.0_31
+
+MALTPARSER
+Version:                       1.8.1
+Build date:                    November 22 2014
+
+SETTINGS
+2planar
+  reduceonswitch (-2pr)                 false
+config
+  logfile (-lfi)                        stdout
+  workingdir (  -w)                     user.dir
+  name (  -c)                           langModel
+  logging ( -cl)                        info
+  flowchart (  -m)                      learn
+  type (  -t)                           singlemalt
+  url (  -u)                            
+covington
+  allow_shift ( -cs)                    false
+  allow_root ( -cr)                     true
+graph
+  max_sentence_length (-gsl)            256
+  root_label (-grl)                     ROOT
+  head_rules (-ghr)                     
+guide
+  features (  -F)                       NivreEager.xml
+  data_split_threshold (  -T)           50
+  kbest_type ( -kt)                     rank
+  data_split_structure (  -s)           
+  data_split_column (  -d)              
+  learner (  -l)                        liblinear
+  decision_settings (-gds)              T.TRANS+A.DEPREL
+  classitem_separator (-gcs)            ~
+  kbest (  -k)                          -1
+input
+  charset ( -ic)                        UTF-8
+  reader ( -ir)                         tab
+  reader_options (-iro)                 
+  format ( -if)                         /appdata/dataformat/conllx.xml
+  infile (  -i)                         ndt_1-0_nob_train80.conll
+  iterations ( -it)                     1
+lib
+  external ( -lx)                       
+  save_instance_files ( -li)            false
+  options ( -lo)                        -s_4_-c_0.1
+  verbosity ( -lv)                      silent
+multiplanar
+  planar_root_handling (-prh)           normal
+nivre
+  enforce_tree ( -nt)                   false
+  allow_reduce ( -ne)                   false
+  allow_root ( -nr)                     false
+output
+  charset ( -oc)                        UTF-8
+  outfile (  -o)                        
+  format ( -of)                         
+  writer_options (-owo)                 
+  writer ( -ow)                         tab
+planar
+  no_covered_roots (-pcov)               false
+  acyclicity (-pacy)                     true
+  connectedness (-pcon)                  none
+pproj
+  marking_strategy ( -pp)               head
+  lifting_order (-plo)                  shortest
+  covered_root (-pcr)                   none
+singlemalt
+  mode ( -sm)                           parse
+  diagnostics ( -di)                    false
+  use_partial_tree ( -up)               false
+  propagation ( -fp)                    
+  parsing_algorithm (  -a)              nivreeager
+  guide_model ( -gm)                    single
+  null_value ( -nv)                     one
+  diafile (-dif)                        stdout
