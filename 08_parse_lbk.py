@@ -7,7 +7,7 @@ import glob
 from subprocess import Popen, PIPE
 
 # Usage: python 08_parse_lbk.py <LBK_BASEPATH>
-#        LBK_BASEPATH should be the top-level directory of the LBK corpus
+#        LBK_BASEPATH should be the top-level directory of the LBK corpus (the CONLL version)
 
 
 # java -jar tools/maltparser-1.8.1/maltparser-1.8.1.jar -f finalOptionsFile.xml -m parse -c ndt_nob_optimized -i data_new/lbk/SA02SaJo01.conll -o data_new/lbk/SA02SaJo01.dep.conll
