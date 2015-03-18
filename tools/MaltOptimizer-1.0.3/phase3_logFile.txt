@@ -1,0 +1,15 @@
+Training set path:/Users/rkn083/mystuff/projects/iln/nodalida_2015/maltnob/data_new/ndt_1-0_nob.conll
+Size (tokens):311277
+Size (sentences):20045
+Non projective:18.373659266650037
+Dangling Punctuation:0
+LAS:89.63
+Default:83.62
+NumRootLabels:3
+JavaHeap:-Xmx5120m
+MaxTokens:2147483647
+CposEqPos:true
+LemmaBlank:false
+FeatsBlank:false
+allow_root:true
+allow_reduce:false
